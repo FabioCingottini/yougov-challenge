@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - mongodb_yougov:/data/db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: yougov
+      MONGO_INITDB_ROOT_PASSWORD: yougov
+      MONGO_INITDB_DATABASE: yougov
+volumes:
+  mongodb_yougov:
